@@ -33,10 +33,11 @@
 
 **工具目录 `utils/`**
 
-| 组件 | 描述 | 状态 |
-| - | - | - |
-| `Console.hpp` | 控制台辅助类：支持彩色输出、光标控制、用户输入封装，基于 ANSI 转义码 | ✅ 已完成 |
-| `DebugLog.hpp` | 轻量级日志系统：支持多级别（DEBUG/INFO/WARN/ERROR）、输出到控制台/文件、自动时间戳、线程安全 | ✅ 已完成 |
+| 组件 | 描述 |
+| - | - |
+| `BigInt.hpp` | 大数类：支持任意大小的整型 |
+| `Console.hpp` | 控制台辅助类：支持彩色输出、光标控制、用户输入封装，基于 ANSI 转义码 |
+| `DebugLog.hpp` | 轻量级日志系统：支持多级别（DEBUG/INFO/WARN/ERROR）、输出到控制台/文件、自动时间戳、线程安全 |
 
 > 更多实用工具和算法将陆续加入，欢迎贡献！
 
@@ -94,6 +95,7 @@ CppUtils/
 ├── screenshot/                         # 截屏资源文件
 │   └── README.md                       # screenshot 目录说明
 ├── utils/                              # 工具
+│   ├── BigInt.hpp                      # 大数类
 │   ├── Console.hpp                     # 控制台类
 │   ├── DebugLog.hpp                    # 日志系统
 │   └── README.md                       # utils 目录说明
