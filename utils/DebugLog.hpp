@@ -5,9 +5,6 @@
 
 #pragma once
 
- // 第三方库
-#include <nlohmann/json.hpp>
-
 // 标准库
 #include <algorithm>
 #include <functional>
@@ -48,31 +45,6 @@ struct LogSink {
 // DebugLogUtil - 日志辅助工具命名空间
 // ============================================
 namespace DebugLogUtil {
-
-    /// @brief 将 nlohmann::json 转换为可读字符串
-    /// @param val JSON 值
-    /// @return 字符串表示
-    inline std::string json_value_to_string(const nlohmann::json& val) {
-        if (val.is_string()) {
-            return val.get<std::string>();
-        }
-        if (val.is_number()) {
-            return std::to_string(val.get<double>());
-        }
-        if (val.is_boolean()) {
-            return val.get<bool>() ? "true" : "false";
-        }
-        if (val.is_null()) {
-            return "null";
-        }
-        if (val.is_array()) {
-            return val.dump();
-        }
-        if (val.is_object()) {
-            return val.dump();
-        }
-        return "unknown";
-    }
 
     /// @brief 移除字符串中的换行符，并将连续多个空格压缩为一个
     /// @param str 输入字符串

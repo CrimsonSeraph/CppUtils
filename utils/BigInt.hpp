@@ -142,7 +142,7 @@ private:
 
     // Karatsuba 乘法（递归）
     std::vector<long long> karatsuba(const std::vector<long long>& a,
-        const std::vector<long long>& b) {
+        const std::vector<long long>& b) const {
         // 规模较小时回退到普通乘法
         if (a.empty() || b.empty()) return {};
         if (a.size() <= 32 || b.size() <= 32) {
